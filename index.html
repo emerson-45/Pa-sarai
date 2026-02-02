@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Sarai ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #f0e6ff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .tarjeta-container {
+            max-width: 650px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .tarjeta-intima {
+            background: linear-gradient(145deg, #2d2d4e, #22223b);
+            border-radius: 20px;
+            padding: 45px 35px;
+            box-shadow: 0 15px 35px rgba(110, 70, 200, 0.25),
+                        0 0 50px rgba(180, 120, 255, 0.1);
+            position: relative;
+            border: 2px solid #8a65cc;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .tarjeta-intima::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, 
+                #ff6b9d, 
+                #c86bfa, 
+                #8a65cc, 
+                #6b8cff);
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.2rem;
+            background: linear-gradient(45deg, #ff6b9d, #c86bfa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(200, 107, 250, 0.3);
+        }
+        
+        .subtitulo {
+            color: #c8b6ff;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .simbolo-picante {
+            font-size: 3rem;
+            margin: 25px 0;
+            color: #ff6b9d;
+            animation: latido 1.8s infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 107, 157, 0.5));
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .simbolo-picante:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+        
+        .mensaje-secreto {
+            background: rgba(42, 38, 65, 0.7);
+            border-radius: 15px;
+            padding: 35px;
+            text-align: left;
+            line-height: 1.8;
+            font-size: 1.15rem;
+            border-left: 4px solid #c86bfa;
+            margin-top: 20px;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+        
+        .destacado {
+            color: #ff9dcc;
+            font-weight: 600;
+            text-shadow: 0 0 5px rgba(255, 157, 204, 0.3);
+            font-style: italic;
+        }
+        
+        .sugerencia {
+            color: #c86bfa;
+            border-left: 3px solid #ff6b9d;
+            padding-left: 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        
+        .firma {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            background: linear-gradient(45deg, #ff6b9d, #c86bfa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-top: 30px;
+            text-align: right;
+            font-weight: 700;
+        }
+        
+        .particulas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .particula {
+            position: absolute;
+            font-size: 1.3rem;
+            opacity: 0;
+            animation: flotar-sensual 10s infinite linear;
+        }
+        
+        .boton-intimo {
+            background: linear-gradient(45deg, #ff6b9d, #c86bfa);
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: all 0.4s;
+            box-shadow: 0 5px 20px rgba(200, 107, 250, 0.4);
+            letter-spacing: 1px;
+        }
+        
+        .boton-intimo:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(255, 107, 157, 0.6);
+            background: linear-gradient(45deg, #ff80aa, #d580ff);
+        }
+        
+        .mensaje-oculto {
+            display: none;
+            background: rgba(58, 48, 84, 0.9);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 25px;
+            font-style: italic;
+            border: 1px solid #ff6b9d;
+            text-align: center;
+            font-size: 1.2rem;
+            backdrop-filter: blur(8px);
+        }
+        
+        .mensaje-extra {
+            display: none;
+            background: rgba(70, 50, 100, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 2px dashed #c86bfa;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        @keyframes latido {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        
+        @keyframes flotar-sensual {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .pista-subtexto {
+            font-size: 0.9rem;
+            color: #a090c8;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        
+        .contenedor-interactivo {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .mensaje-secreto { padding: 25px; font-size: 1.05rem; }
+            .tarjeta-intima { padding: 35px 25px; }
+            .contenedor-interactivo { flex-direction: column; align-items: center; }
+        }
+        
+        @media (max-width: 480px) {
+            h1 { font-size: 2.2rem; }
+            .mensaje-secreto { padding: 20px; }
+            .firma { font-size: 1.8rem; }
+            .simbolo-picante { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="tarjeta-container">
+        <div class="tarjeta-intima">
+            <h1 id="tituloPrincipal">Sarai ✨</h1>
+            <p class="subtitulo">Algunas cosas se dicen mejor entre líneas...</p>
+            
+            <div class="simbolo-picante" id="simboloPrincipal">💋</div>
+            
+            <div class="mensaje-secreto">
+                <p>Sarai, hay algo en ti que <span class="destacado">me hace perder el ritmo</span> cuando te veo. No sé si son tus ojos, tu forma de sonreír, o ese algo especial que solo tú tienes.</p>
+                
+                <p class="sugerencia">Me pregunto si alguna vez has notado cómo <span class="destacado">cambia el ambiente</span> cuando entras en una habitación...</p>
+                
+                <p>Hay <span class="destacado">tensión en el aire</span> cuando estamos cerca, ¿no lo sientes? Esa energía que parece cargarse cada vez que nuestras miradas se encuentran. Me gusta pensar que no soy el único que lo nota.</p>
+                
+                <p class="sugerencia">A veces me pregunto qué pasaría si alguien <span class="destacado">diera el primer paso</span>... solo por curiosidad, claro.</p>
+                
+                <p>Tienes una forma de <span class="destacado">calentar el ambiente</span> sin siquiera intentarlo. Y aunque nunca lo digo abiertamente, disfruto de esos momentos donde las cosas se sienten... <span class="destacado">un poco más intensas</span>.</p>
+                
+                <div class="firma">
+                    Alguien que nota más de lo que dice 😉
+                </div>
+            </div>
+            
+            <div class="contenedor-interactivo">
+                <button class="boton-intimo" id="btnMensaje">
+                    💬 ¿Captas la indirecta?
+                </button>
+                <button class="boton-intimo" id="btnExtra">
+                    🔥 Un poco más directo
+                </button>
+            </div>
+            
+            <div class="mensaje-oculto" id="mensajeOculto">
+                <p>No sé si eres consciente del efecto que tienes... pero deberías serlo 😏</p>
+                <p class="pista-subtexto">(A veces las cosas no dichas son las más interesantes)</p>
+            </div>
+            
+            <div class="mensaje-extra" id="mensajeExtra">
+                <p>Cuando te veo, me pregunto cómo sería cruzar esa línea invisible entre nosotros. Solo una curiosidad, nada más... ¿o sí? 🔥</p>
+                <p class="pista-subtexto">(Las mejores aventuras empiezan con un "¿y si...?")</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="particulas" id="particulasContainer"></div>
+    
+    <script>
+        // Crear partículas flotantes
+        const particulasContainer = document.getElementById('particulasContainer');
+        const simbolosSensuales = ['💋', '🔥', '💫', '✨', '🌸', '💞', '💖', '🌙'];
+        
+        for (let i = 0; i < 20; i++) {
+            const particula = document.createElement('div');
+            particula.classList.add('particula');
+            particula.innerHTML = simbolosSensuales[Math.floor(Math.random() * simbolosSensuales.length)];
+            
+            const left = Math.random() * 100;
+            const delay = Math.random() * 5;
+            const duracion = Math.random() * 5 + 8;
+            const size = Math.random() * 1.2 + 1;
+            
+            particula.style.left = `${left}%`;
+            particula.style.animationDelay = `${delay}s`;
+            particula.style.animationDuration = `${duracion}s`;
+            particula.style.fontSize = `${size}rem`;
+            
+            // Color aleatorio
+            const colores = ['#ff6b9d', '#c86bfa', '#8a65cc', '#ff9dcc'];
+            particula.style.color = colores[Math.floor(Math.random() * colores.length)];
+            
+            particulasContainer.appendChild(particula);
+        }
+        
+        // Interacción con el símbolo principal
+        const simboloPrincipal = document.getElementById('simboloPrincipal');
+        const tituloPrincipal = document.getElementById('tituloPrincipal');
+        
+        simboloPrincipal.addEventListener('click', function() {
+            // Cambiar símbolo
+            const simbolos = ['💋', '🔥', '👄', '💖', '💫', '🌹', '👁️', '🫦'];
+            const nuevoSimbolo = simbolos[Math.floor(Math.random() * simbolos.length)];
+            simboloPrincipal.innerHTML = nuevoSimbolo;
+            
+            // Efecto visual
+            simboloPrincipal.style.animation = 'none';
+            setTimeout(() => {
+                simboloPrincipal.style.animation = 'latido 1.8s infinite';
+            }, 10);
+            
+            // Cambiar color
+            const colores = ['#ff6b9d', '#c86bfa', '#ff80aa', '#d580ff'];
+            simboloPrincipal.style.color = colores[Math.floor(Math.random() * colores.length)];
+            
+            // Crear partículas adicionales
+            crearParticulas(3);
+        });
+        
+        function crearParticulas(cantidad) {
+            for (let i = 0; i < cantidad; i++) {
+                const particula = document.createElement('div');
+                particula.classList.add('particula');
+                particula.innerHTML = '💖';
+                
+                const left = 40 + Math.random() * 20;
+                const delay = 0;
+                const duracion = Math.random() * 3 + 4;
+                
+                particula.style.left = `${left}%`;
+                particula.style.animationDelay = `${delay}s`;
+                particula.style.animationDuration = `${duracion}s`;
+                particula.style.fontSize = '1.5rem';
+                particula.style.color = '#ff6b9d';
+                
+                particulasContainer.appendChild(particula);
+                
+                setTimeout(() => {
+                    particula.remove();
+                }, 7000);
+            }
+        }
+        
+        // Botón de mensaje oculto
+        const btnMensaje = document.getElementById('btnMensaje');
+        const mensajeOculto = document.getElementById('mensajeOculto');
+        
+        btnMensaje.addEventListener('click', function() {
+            if (mensajeOculto.style.display === 'block') {
+                mensajeOculto.style.display = 'none';
+                btnMensaje.innerHTML = '💬 ¿Captas la indirecta?';
+            } else {
+                mensajeOculto.style.display = 'block';
+                btnMensaje.innerHTML = '😉 Tal vez sí...';
+                
+                // Ocultar mensaje extra si está visible
+                mensajeExtra.style.display = 'none';
+                btnExtra.innerHTML = '🔥 Un poco más directo';
+                
+                // Efecto de aparición
+                efectoAparicion(mensajeOculto);
+            }
+        });
+        
+        // Botón de mensaje extra
+        const btnExtra = document.getElementById('btnExtra');
+        const mensajeExtra = document.getElementById('mensajeExtra');
+        
+        btnExtra.addEventListener('click', function() {
+            if (mensajeExtra.style.display === 'block') {
+                mensajeExtra.style.display = 'none';
+                btnExtra.innerHTML = '🔥 Un poco más directo';
+            } else {
+                mensajeExtra.style.display = 'block';
+                btnExtra.innerHTML = '😳 Ok, eso fue directo';
+                
+                // Ocultar mensaje oculto si está visible
+                mensajeOculto.style.display = 'none';
+                btnMensaje.innerHTML = '💬 ¿Captas la indirecta?';
+                
+                // Efecto de aparición
+                efectoAparicion(mensajeExtra);
+            }
+        });
+        
+        function efectoAparicion(elemento) {
+            elemento.style.opacity = '0';
+            elemento.style.transform = 'translateY(15px) scale(0.95)';
+            
+            let opacidad = 0;
+            const animacion = setInterval(() => {
+                opacidad += 0.05;
+                elemento.style.opacity = opacidad;
+                elemento.style.transform = `translateY(${15 - opacidad * 15}px) scale(${0.95 + opacidad * 0.05})`;
+                
+                if (opacidad >= 1) {
+                    clearInterval(animacion);
+                }
+            }, 20);
+        }
+        
+        // Efecto de brillo en el título
+        const titulo = document.getElementById('tituloPrincipal');
+        
+        function efectoBrillo() {
+            const gradiente = `linear-gradient(45deg, 
+                hsl(${Math.sin(Date.now()/2000)*30 + 330}, 100%, 65%), 
+                hsl(${Math.cos(Date.now()/2000)*30 + 280}, 100%, 65%))`;
+            
+            titulo.style.backgroundImage = gradiente;
+            requestAnimationFrame(efectoBrillo);
+        }
+        
+        // Iniciar efectos
+        setTimeout(() => {
+            efectoBrillo();
+            
+            // Efecto de escritura sutil
+            const textosDestacados = document.querySelectorAll('.destacado');
+            textosDestacados.forEach(texto => {
+                const original = texto.textContent;
+                texto.textContent = '';
+                
+                let j = 0;
+                function escribir() {
+                    if (j < original.length) {
+                        texto.textContent += original.charAt(j);
+                        j++;
+                        setTimeout(escribir, 50);
+                    }
+                }
+                setTimeout(escribir, 1000 + Math.random() * 1000);
+            });
+        }, 500);
+    </script>
+</body>
+</html>
