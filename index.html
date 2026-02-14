@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Sarai ✨ - Inicio Escolar</title>
+    <title>Para Sarai ✨ - San Valentín</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         * {
@@ -87,7 +87,7 @@
             transform: scale(1.15);
         }
         
-        .seccion-escolar {
+        .seccion-normal {
             background: rgba(42, 38, 65, 0.7);
             border-radius: 15px;
             padding: 35px;
@@ -101,7 +101,7 @@
             backdrop-filter: blur(8px);
         }
         
-        .seccion-intima {
+        .seccion-coqueta {
             background: rgba(58, 48, 84, 0.8);
             border-radius: 15px;
             padding: 35px;
@@ -132,7 +132,7 @@
             position: relative;
         }
         
-        .destacado-escolar {
+        .destacado-normal {
             color: #8aafff;
             font-weight: 600;
             background-color: rgba(107, 140, 255, 0.15);
@@ -203,7 +203,7 @@
             box-shadow: 0 10px 25px rgba(200, 107, 250, 0.5);
         }
         
-        .boton-intimo {
+        .boton-coqueto {
             background: linear-gradient(45deg, #ff6b9d, #c86bfa);
             color: white;
             border: none;
@@ -222,7 +222,7 @@
             gap: 8px;
         }
         
-        .boton-intimo:hover {
+        .boton-coqueto:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 22px rgba(255, 107, 157, 0.6);
         }
@@ -271,7 +271,7 @@
         
         @media (max-width: 768px) {
             h1 { font-size: 2.8rem; }
-            .seccion-escolar, .seccion-intima { padding: 25px; font-size: 1.1rem; }
+            .seccion-normal, .seccion-coqueta { padding: 25px; font-size: 1.1rem; }
             .sobre-mixto { padding: 40px 25px; }
             .subtitulo { font-size: 1.1rem; }
             .icono-dinamico { font-size: 2.8rem; }
@@ -279,73 +279,71 @@
         
         @media (max-width: 480px) {
             h1 { font-size: 2.3rem; }
-            .seccion-escolar, .seccion-intima { padding: 20px; }
+            .seccion-normal, .seccion-coqueta { padding: 20px; }
             .firma { font-size: 1.9rem; }
-            .boton-toggle, .boton-intimo { padding: 12px 20px; font-size: 1rem; }
+            .boton-toggle, .boton-coqueto { padding: 12px 20px; font-size: 1rem; }
         }
     </style>
 </head>
 <body>
     <div class="carta-container">
         <div class="sobre-mixto">
-            <h1 id="tituloPrincipal">Para Sarai ✨</h1>
-            <p class="subtitulo">Un mensaje para tu inicio escolar... y algo más</p>
+            <h1 id="tituloPrincipal">Feliz San Valentín</h1>
+            <p class="subtitulo">Un mensaje especial para ti... y algo más</p>
             
-            <div class="icono-dinamico" id="iconoPrincipal">🎓</div>
+            <div class="icono-dinamico" id="iconoPrincipal">💝</div>
             
-            <!-- SECCIÓN ESCOLAR (Visible inicialmente) -->
-            <div class="seccion-escolar" id="seccionEscolar">
-                <p class="saludo-especial">📚 Sarai, mi niña...</p>
+            <!-- SECCIÓN NORMAL (Visible inicialmente) -->
+            <div class="seccion-normal" id="seccionNormal">
+                <p class="saludo-especial">🌸 Sarai...</p>
                 
-                <p>Mañana <span class="destacado-escolar">ingresas a una nueva etapa</span>. Este es un nuevo paso: <span class="destacado-escolar">3 años</span> que serán de <span class="destacado-escolar">nuevas experiencias</span> y muchas <span class="destacado-escolar">enseñanzas</span> que te acompañarán toda la vida.</p>
+                <p>En este <span class="destacado-normal">Día de San Valentín</span> quería desearte un día muy bonito, rodeada de quienes te quieren y sobre todo recordándote lo <span class="destacado-normal">especial</span> que eres.</p>
                 
-                <p>Vendrán <span class="destacado-escolar">muchos desafíos nuevos</span> por enfrentarte, pero cada uno te hará más fuerte, más sabia y más preparada para lo que viene después.</p>
+                <p>Que tengas un día lleno de <span class="destacado-normal">alegría</span>, de <span class="destacado-normal">sorpresas</span> y de momentos lindos que recordar.</p>
                 
                 <div class="consejo">
-                    <p>Espero de corazón que te vaya <span class="destacado-escolar">muy bien</span> en todo lo que emprendas. Y por supuesto, <span class="destacado-escolar">cuídate mucho</span> en este camino.</p>
+                    <p>Espero que este día te traiga todo lo que mereces. Y recuerda, <span class="destacado-normal">tú vales mucho</span> más de lo que crees. ❤️</p>
                 </div>
-                
-                <p>Recuerda siempre: <span class="destacado-escolar">¡Tú puedes!</span> Tienes toda la capacidad, la inteligencia y la fuerza para superar cualquier obstáculo que se presente.</p>
                 
                 <div class="firma">
                     Con cariño 💖
                 </div>
             </div>
             
-            <!-- SECCIÓN ÍNTIMA (Oculta inicialmente) -->
-            <div class="seccion-intima" id="seccionIntima">
-                <p class="saludo-especial">💋 Y ahora, entre nosotros...</p>
+            <!-- SECCIÓN COQUETA (Oculta inicialmente) -->
+            <div class="seccion-coqueta" id="seccionCoqueta">
+                <p class="saludo-especial">💋 Y ahora... lo que no te digo siempre</p>
                 
-                <p>Hay algo en ti que <span class="destacado">me hace perder el ritmo</span> cuando te veo. No sé si son tus ojos, tu forma de sonreír, o ese algo especial que solo tú tienes.</p>
+                <p>En este <span class="destacado">San Valentín</span> no puedo dejar de pensar en lo mucho que <span class="destacado">me gusta</span> cuando te tengo cerca. Hay algo en ti que <span class="destacado">me atrapa</span> sin que pueda evitarlo.</p>
                 
-                <p>Me pregunto si alguna vez has notado cómo <span class="destacado">cambia el ambiente</span> cuando entras en una habitación... hay una energía diferente.</p>
+                <p>Me pregunto si alguna vez has notado cómo <span class="destacado">el tiempo se detiene</span> cuando estamos juntos... o cómo <span class="destacado">la noche se vuelve más interesante</span> si estás tú.</p>
                 
-                <p>Hay <span class="destacado">tensión en el aire</span> cuando estamos cerca, ¿no lo sientes? Esa electricidad que parece cargarse cada vez que nuestras miradas se encuentran.</p>
+                <p>Hay una <span class="destacado">tensión especial</span> que no sé si es solo mía o también tuya. Esa mirada, esa sonrisa... <span class="destacado">me desarman</span> por completo.</p>
                 
                 <div class="consejo">
-                    <p>A veces me pregunto qué pasaría si alguien <span class="destacado">diera el primer paso</span>... solo por curiosidad, claro. Las mejores aventuras empiezan con un "¿y si...?"</p>
+                    <p>Este día está hecho para <span class="destacado">confesar cosas</span>, ¿no crees? Por ejemplo, que me encantaría saber qué hay detrás de esa mirada tuya cuando me ves... <span class="destacado">y si alguna vez has pensado en algo más que una amistad</span>.</p>
                 </div>
                 
-                <p>Tienes una forma de <span class="destacado">calentar el ambiente</span> sin siquiera intentarlo. Y aunque nunca lo digo abiertamente, disfruto de esos momentos donde las cosas se sienten... <span class="destacado">un poco más intensas</span>.</p>
+                <p>Tienes una forma de <span class="destacado">encender la habitación</span> sin darte cuenta. Y aunque no lo diga, disfruto esos momentos en los que <span class="destacado">la conversación se vuelve más íntima</span> y las miradas dicen más que las palabras.</p>
                 
                 <div class="firma">
-                    Alguien que nota más de lo que dice 😉
+                    Alguien que piensa en ti más de lo que debería 😏
                 </div>
             </div>
             
             <button class="boton-toggle" id="btnToggle">
-                🔄 Cambiar a mensaje especial
+                🔄 Cambiar a mensaje coqueto
             </button>
             
-            <p class="indicador" id="indicador">Actualmente: Mensaje de inicio escolar</p>
+            <p class="indicador" id="indicador">Actualmente: Mensaje normal de San Valentín</p>
             
-            <button class="boton-intimo" id="btnSecreto">
-                💬 Algo que quería decirte...
+            <button class="boton-coqueto" id="btnSecreto">
+                💬 Un secreto más...
             </button>
             
             <div class="mensaje-secreto" id="mensajeSecreto">
-                <p>No sé si eres consciente del efecto que tienes sobre mí... pero cada vez que te veo, me pregunto cómo sería cruzar esa línea invisible entre nosotros. 🔥</p>
-                <p class="indicador" style="margin-top: 15px;">(Las cosas no dichas suelen ser las más interesantes)</p>
+                <p>¿Sabes? Hay cosas que no hacen falta decir, pero hoy me atrevo: me encanta cómo te ves siempre, pero más me gusta imaginarnos en situaciones donde no hay nadie más que tú y yo. 🔥</p>
+                <p class="indicador" style="margin-top: 15px;">(Lo que pasa en San Valentín...)</p>
             </div>
         </div>
     </div>
@@ -355,14 +353,14 @@
     <script>
         // Crear partículas flotantes
         const particulasContainer = document.getElementById('particulasContainer');
-        const simbolosEscolares = ['📚', '🎓', '✏️', '📝', '📖', '🔬', '🧪', '📊'];
-        const simbolosIntimos = ['💋', '🔥', '💫', '✨', '💖', '🌹', '👁️', '🫦'];
+        const simbolosNormales = ['🌸', '💝', '💐', '🎁', '💌', '💕', '💞', '💖'];
+        const simbolosCoquetos = ['💋', '🔥', '🌹', '🍷', '🕯️', '💫', '👁️', '🫦'];
         
         function crearParticulas(tipo) {
             // Limpiar partículas existentes
             particulasContainer.innerHTML = '';
             
-            const simbolos = tipo === 'escolar' ? simbolosEscolares : simbolosIntimos;
+            const simbolos = tipo === 'normal' ? simbolosNormales : simbolosCoquetos;
             
             for (let i = 0; i < 18; i++) {
                 const particula = document.createElement('div');
@@ -380,7 +378,7 @@
                 particula.style.fontSize = `${size}rem`;
                 
                 // Color según el tipo
-                if (tipo === 'escolar') {
+                if (tipo === 'normal') {
                     const colores = ['#6b8cff', '#8aafff', '#a8c6ff'];
                     particula.style.color = colores[Math.floor(Math.random() * colores.length)];
                 } else {
@@ -393,12 +391,12 @@
         }
         
         // Estado inicial
-        let modoActual = 'escolar';
-        crearParticulas('escolar');
+        let modoActual = 'normal';
+        crearParticulas('normal');
         
         // Elementos del DOM
-        const seccionEscolar = document.getElementById('seccionEscolar');
-        const seccionIntima = document.getElementById('seccionIntima');
+        const seccionNormal = document.getElementById('seccionNormal');
+        const seccionCoqueta = document.getElementById('seccionCoqueta');
         const btnToggle = document.getElementById('btnToggle');
         const indicador = document.getElementById('indicador');
         const iconoPrincipal = document.getElementById('iconoPrincipal');
@@ -407,36 +405,36 @@
         
         // Botón para cambiar entre secciones
         btnToggle.addEventListener('click', function() {
-            if (modoActual === 'escolar') {
-                // Cambiar a modo íntimo
-                seccionEscolar.style.display = 'none';
-                seccionIntima.style.display = 'block';
-                modoActual = 'intimo';
-                btnToggle.innerHTML = '📚 Volver a mensaje escolar';
-                indicador.textContent = 'Actualmente: Mensaje especial';
+            if (modoActual === 'normal') {
+                // Cambiar a modo coqueto
+                seccionNormal.style.display = 'none';
+                seccionCoqueta.style.display = 'block';
+                modoActual = 'coqueto';
+                btnToggle.innerHTML = '🌸 Volver a mensaje normal';
+                indicador.textContent = 'Actualmente: Mensaje coqueto';
                 iconoPrincipal.innerHTML = '💋';
                 iconoPrincipal.style.color = '#ff6b9d';
-                crearParticulas('intimo');
+                crearParticulas('coqueto');
                 
                 // Efecto de transición
-                efectoTransicion(seccionIntima);
+                efectoTransicion(seccionCoqueta);
             } else {
-                // Cambiar a modo escolar
-                seccionIntima.style.display = 'none';
-                seccionEscolar.style.display = 'block';
-                modoActual = 'escolar';
-                btnToggle.innerHTML = '🔄 Cambiar a mensaje especial';
-                indicador.textContent = 'Actualmente: Mensaje de inicio escolar';
-                iconoPrincipal.innerHTML = '🎓';
+                // Cambiar a modo normal
+                seccionCoqueta.style.display = 'none';
+                seccionNormal.style.display = 'block';
+                modoActual = 'normal';
+                btnToggle.innerHTML = '🔄 Cambiar a mensaje coqueto';
+                indicador.textContent = 'Actualmente: Mensaje normal de San Valentín';
+                iconoPrincipal.innerHTML = '💝';
                 iconoPrincipal.style.color = '#6b8cff';
-                crearParticulas('escolar');
+                crearParticulas('normal');
                 
                 // Efecto de transición
-                efectoTransicion(seccionEscolar);
+                efectoTransicion(seccionNormal);
                 
                 // Ocultar mensaje secreto si está visible
                 mensajeSecreto.style.display = 'none';
-                btnSecreto.innerHTML = '💬 Algo que quería decirte...';
+                btnSecreto.innerHTML = '💬 Un secreto más...';
             }
         });
         
@@ -444,10 +442,10 @@
         btnSecreto.addEventListener('click', function() {
             if (mensajeSecreto.style.display === 'block') {
                 mensajeSecreto.style.display = 'none';
-                btnSecreto.innerHTML = '💬 Algo que quería decirte...';
+                btnSecreto.innerHTML = '💬 Un secreto más...';
             } else {
                 mensajeSecreto.style.display = 'block';
-                btnSecreto.innerHTML = '😳 Ok, eso fue directo';
+                btnSecreto.innerHTML = '😏 Es lo que hay...';
                 
                 // Efecto de aparición
                 efectoAparicion(mensajeSecreto);
@@ -456,11 +454,11 @@
         
         // Interacción con el ícono principal
         iconoPrincipal.addEventListener('click', function() {
-            if (modoActual === 'escolar') {
-                const simbolos = ['🎓', '📚', '✏️', '📝', '📖', '🔬'];
+            if (modoActual === 'normal') {
+                const simbolos = ['💝', '🌸', '💐', '🎁', '💌', '💖'];
                 iconoPrincipal.innerHTML = simbolos[Math.floor(Math.random() * simbolos.length)];
             } else {
-                const simbolos = ['💋', '🔥', '👄', '💖', '💫', '🌹'];
+                const simbolos = ['💋', '🔥', '🌹', '🍷', '🕯️', '💫'];
                 iconoPrincipal.innerHTML = simbolos[Math.floor(Math.random() * simbolos.length)];
             }
             
