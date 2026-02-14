@@ -289,20 +289,20 @@
     <div class="carta-container">
         <div class="sobre-mixto">
             <h1 id="tituloPrincipal">Feliz San Valentín</h1>
-            <p class="subtitulo">Un mensaje especial para ti... y algo más</p>
+            <p class="subtitulo">Un mensaje para ti...</p>
             
             <div class="icono-dinamico" id="iconoPrincipal">💝</div>
             
             <!-- SECCIÓN NORMAL (Visible inicialmente) -->
             <div class="seccion-normal" id="seccionNormal">
                 <p class="saludo-especial">🌸 Sarai...</p>
-                
+                <audio src="muci.mp3" autoplay loop style="display: none;"></audio>
                 <p>En este <span class="destacado-normal">Día de San Valentín</span> quería desearte un día muy bonito, rodeada de quienes te quieren y sobre todo recordándote lo <span class="destacado-normal">especial</span> que eres.</p>
                 
                 <p>Que tengas un día lleno de <span class="destacado-normal">alegría</span>, de <span class="destacado-normal">sorpresas</span> y de momentos lindos que recordar.</p>
                 
                 <div class="consejo">
-                    <p>Espero que este día te traiga todo lo que mereces. Y recuerda, <span class="destacado-normal">tú vales mucho</span> más de lo que crees. ❤️</p>
+                    <p>Espero que este día te traiga todo lo que mereces. ❤️</p>
                 </div>
                 
                 <div class="firma">
@@ -310,40 +310,32 @@
                 </div>
             </div>
             
-            <!-- SECCIÓN COQUETA (Oculta inicialmente) -->
+            <!-- SECCIÓN COQUETA (Oculta inicialmente) - VERSIÓN DIRECTA -->
             <div class="seccion-coqueta" id="seccionCoqueta">
-                <p class="saludo-especial">💋 Y ahora... lo que no te digo siempre</p>
+                <p class="saludo-especial">🔥 Modo sin filtros</p>
                 
-                <p>En este <span class="destacado">San Valentín</span> no puedo dejar de pensar en lo mucho que <span class="destacado">me gusta</span> cuando te tengo cerca. Hay algo en ti que <span class="destacado">me atrapa</span> sin que pueda evitarlo.</p>
+                <p>Sarai, ¿sabes qué es más dura que mi verdura? <span class="destacado">Mi... determinación</span> cuando te veo 😏</p>
                 
-                <p>Me pregunto si alguna vez has notado cómo <span class="destacado">el tiempo se detiene</span> cuando estamos juntos... o cómo <span class="destacado">la noche se vuelve más interesante</span> si estás tú.</p>
-                
-                <p>Hay una <span class="destacado">tensión especial</span> que no sé si es solo mía o también tuya. Esa mirada, esa sonrisa... <span class="destacado">me desarman</span> por completo.</p>
-                
-                <div class="consejo">
-                    <p>Este día está hecho para <span class="destacado">confesar cosas</span>, ¿no crees? Por ejemplo, que me encantaría saber qué hay detrás de esa mirada tuya cuando me ves... <span class="destacado">y si alguna vez has pensado en algo más que una amistad</span>.</p>
-                </div>
-                
-                <p>Tienes una forma de <span class="destacado">encender la habitación</span> sin darte cuenta. Y aunque no lo diga, disfruto esos momentos en los que <span class="destacado">la conversación se vuelve más íntima</span> y las miradas dicen más que las palabras.</p>
+                <p>Y ya que estamos en confianza... ¿te gusta <span class="destacado">la fruta</span>? Porque yo tengo unos <span class="destacado">melones</span> que te van a encantar 😉</p>
                 
                 <div class="firma">
-                    Alguien que piensa en ti más de lo que debería 😏
+                    Atentamente, el frutero 🍆🍈
                 </div>
             </div>
             
             <button class="boton-toggle" id="btnToggle">
-                🔄 Cambiar a mensaje coqueto
+                🔄 Cambiar a modo picante
             </button>
             
-            <p class="indicador" id="indicador">Actualmente: Mensaje normal de San Valentín</p>
+            <p class="indicador" id="indicador">Actualmente: Modo educado</p>
             
             <button class="boton-coqueto" id="btnSecreto">
                 💬 Un secreto más...
             </button>
             
             <div class="mensaje-secreto" id="mensajeSecreto">
-                <p>¿Sabes? Hay cosas que no hacen falta decir, pero hoy me atrevo: me encanta cómo te ves siempre, pero más me gusta imaginarnos en situaciones donde no hay nadie más que tú y yo. 🔥</p>
-                <p class="indicador" style="margin-top: 15px;">(Lo que pasa en San Valentín...)</p>
+                <p>Me encantan tus enormes melones... ¿los cultivas tú o necesitas ayuda para cargarlos? 🍈🍈</p>
+                <p class="indicador" style="margin-top: 15px;">(Ya que estamos en confianza)</p>
             </div>
         </div>
     </div>
@@ -354,7 +346,7 @@
         // Crear partículas flotantes
         const particulasContainer = document.getElementById('particulasContainer');
         const simbolosNormales = ['🌸', '💝', '💐', '🎁', '💌', '💕', '💞', '💖'];
-        const simbolosCoquetos = ['💋', '🔥', '🌹', '🍷', '🕯️', '💫', '👁️', '🫦'];
+        const simbolosCoquetos = ['💋', '🔥', '🍆', '🍑', '🍈', '🌶️', '🥵', '😈'];
         
         function crearParticulas(tipo) {
             // Limpiar partículas existentes
@@ -410,9 +402,9 @@
                 seccionNormal.style.display = 'none';
                 seccionCoqueta.style.display = 'block';
                 modoActual = 'coqueto';
-                btnToggle.innerHTML = '🌸 Volver a mensaje normal';
-                indicador.textContent = 'Actualmente: Mensaje coqueto';
-                iconoPrincipal.innerHTML = '💋';
+                btnToggle.innerHTML = '🌸 Volver a modo educado';
+                indicador.textContent = 'Actualmente: Modo picante 🌶️';
+                iconoPrincipal.innerHTML = '🍆';
                 iconoPrincipal.style.color = '#ff6b9d';
                 crearParticulas('coqueto');
                 
@@ -423,8 +415,8 @@
                 seccionCoqueta.style.display = 'none';
                 seccionNormal.style.display = 'block';
                 modoActual = 'normal';
-                btnToggle.innerHTML = '🔄 Cambiar a mensaje coqueto';
-                indicador.textContent = 'Actualmente: Mensaje normal de San Valentín';
+                btnToggle.innerHTML = '🔄 Cambiar a modo picante';
+                indicador.textContent = 'Actualmente: Modo educado';
                 iconoPrincipal.innerHTML = '💝';
                 iconoPrincipal.style.color = '#6b8cff';
                 crearParticulas('normal');
@@ -445,7 +437,7 @@
                 btnSecreto.innerHTML = '💬 Un secreto más...';
             } else {
                 mensajeSecreto.style.display = 'block';
-                btnSecreto.innerHTML = '😏 Es lo que hay...';
+                btnSecreto.innerHTML = '😈 Ya lo solté todo';
                 
                 // Efecto de aparición
                 efectoAparicion(mensajeSecreto);
@@ -458,7 +450,7 @@
                 const simbolos = ['💝', '🌸', '💐', '🎁', '💌', '💖'];
                 iconoPrincipal.innerHTML = simbolos[Math.floor(Math.random() * simbolos.length)];
             } else {
-                const simbolos = ['💋', '🔥', '🌹', '🍷', '🕯️', '💫'];
+                const simbolos = ['🍆', '🍑', '🍈', '🌶️', '🥵', '😈'];
                 iconoPrincipal.innerHTML = simbolos[Math.floor(Math.random() * simbolos.length)];
             }
             
